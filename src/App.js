@@ -1,13 +1,21 @@
+import { useState } from "react";
 import Banner from "./components/Banner/Banner";
 import Form from "./components/Form";
 
 function App() {
-  return (
-    <div className="App">
-        <Banner/>
-        <Form/>
-    </div>
-  );
+    const [employes, setEmployes] = useState([]);
+
+    const newEmploye = (employe) => {
+        console.log(employe);
+        setEmployes([...employes, employe]);
+    };
+
+    return (
+        <div className="App">
+            <Banner />
+            <Form registeredEmploye={(employe) => newEmploye(employe)} />
+        </div>
+    );
 }
 
 export default App;

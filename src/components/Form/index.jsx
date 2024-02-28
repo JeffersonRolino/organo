@@ -4,7 +4,7 @@ import DropDown from "../DropDown";
 import TextInput from "../TextInput";
 import "./Form.css";
 
-const Form = () => {
+const Form = (props) => {
     const [name, setName] = useState("");
     const [position, setPosition] = useState("");
     const [image, setImage] = useState("");
@@ -22,9 +22,12 @@ const Form = () => {
 
     const onSave = (event) => {
         event.preventDefault();
-        console.log(
-            `Form was submited: ${name}, ${position}, ${image}, ${team}`
-        );
+        props.registeredEmploye({
+            name,
+            position,
+            image,
+            team,
+        });
     };
 
     return (

@@ -10,6 +10,13 @@
     padding-bottom: 8px;
 }
 
+.team .employes {
+    display: flex;
+    justify-content: space-around;
+    margin-top: 32px;
+    flex-wrap: wrap;
+}
+
 /*
 Primary: #57C278
 Secondary: #D9F7E9

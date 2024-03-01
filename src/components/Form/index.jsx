@@ -46,9 +46,9 @@ const Form = (props) => {
                 />
                 <DropDown
                     value={team}
-                    onChangeValue={(value) => setTeam(value)}
                     label="Times"
                     itens={props.teams}
+                    onChangeValue={(value) => setTeam(value)}
                 ></DropDown>
                 <Button>Criar Card</Button>
             </form>

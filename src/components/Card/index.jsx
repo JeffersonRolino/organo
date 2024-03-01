@@ -7,11 +7,11 @@ const Card = (props) => {
                 className="header"
                 style={{ backgroundColor: props.backgroundColor }}
             >
-                <img src="https://github.com/jeffersonrolino.png" alt="" />
+                <img src={props.image} alt={props.name} />
             </div>
             <div className="footer">
-                <h4>Jefferson Rolino</h4>
-                <h5>Engenheiro de Software</h5>
+                <h4>{props.name}</h4>
+                <h5>{props.position}</h5>
             </div>
         </div>
     );

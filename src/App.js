@@ -52,7 +52,10 @@ function App() {
     return (
         <div className="App">
             <Banner />
-            <Form registeredEmploye={(employe) => newEmploye(employe)} />
+            <Form
+                teams={teams.map((team) => team.name)}
+                registeredEmploye={(employe) => newEmploye(employe)}
+            />
             {teams.map((team) => {
                 return (
                     <Team

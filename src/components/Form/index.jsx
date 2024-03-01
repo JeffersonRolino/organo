@@ -10,16 +10,6 @@ const Form = (props) => {
     const [image, setImage] = useState("");
     const [team, setTeam] = useState("");
 
-    const times = [
-        "Programação",
-        "Front-end",
-        "Data Science",
-        "Devops",
-        "UX e Design",
-        "Mobile",
-        "Inovação e Gestão",
-    ];
-
     const onSave = (event) => {
         event.preventDefault();
         props.registeredEmploye({
@@ -58,7 +48,7 @@ const Form = (props) => {
                     value={team}
                     onChangeValue={(value) => setTeam(value)}
                     label="Times"
-                    itens={times}
+                    itens={props.teams}
                 ></DropDown>
                 <Button>Criar Card</Button>
             </form>

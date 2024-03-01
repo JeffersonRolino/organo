@@ -1,4 +1,5 @@
 import "./Team.css";
+import Card from "../Card";
 
 const Team = (props) => {
     return (
@@ -7,6 +8,7 @@ const Team = (props) => {
             style={{ backgroundColor: props.secondaryColor }}
         >
             <h3 style={{ borderColor: props.primaryColor }}>{props.name}</h3>
+            <Card backgroundColor={props.primaryColor}></Card>
         </section>
     );
 };

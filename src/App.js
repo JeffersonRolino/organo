@@ -15,9 +15,12 @@ function App() {
         <div className="App">
             <Banner />
             <Form registeredEmploye={(employe) => newEmploye(employe)} />
+<<<<<<< HEAD
             <Team name="Programação" />
             <Team name="Frontend" />
             <Team name="Data Science" />
+=======
+>>>>>>> 12174b8b4bab3b3d19ad75e6c9b042513d9bbc03
         </div>
     );
 }

@@ -6,6 +6,44 @@ import Team from "./components/Team";
 function App() {
     const [employes, setEmployes] = useState([]);
 
+    const teams = [
+        {
+            name: "Programação",
+            primaryColor: "#57C278",
+            secondaryColor: "#D9F7E9",
+        },
+        {
+            name: "Front-end",
+            primaryColor: "#82CFFA",
+            secondaryColor: "#E8F8FF",
+        },
+        {
+            name: "Data Science",
+            primaryColor: "#A6D157",
+            secondaryColor: "#F0F8E2",
+        },
+        {
+            name: "Devops",
+            primaryColor: "#E06B69",
+            secondaryColor: "#FDE7E8",
+        },
+        {
+            name: "UX e Design",
+            primaryColor: "#DB6EBF",
+            secondaryColor: "#FAE9F5",
+        },
+        {
+            name: "Mobile",
+            primaryColor: "#FFBA05",
+            secondaryColor: "#FFF5D9",
+        },
+        {
+            name: "Inovação e Gestão",
+            primaryColor: "#FF8A29",
+            secondaryColor: "#FFEEDF",
+        },
+    ];
+
     const newEmploye = (employe) => {
         console.log(employe);
         setEmployes([...employes, employe]);
@@ -15,12 +53,16 @@ function App() {
         <div className="App">
             <Banner />
             <Form registeredEmploye={(employe) => newEmploye(employe)} />
-<<<<<<< HEAD
-            <Team name="Programação" />
-            <Team name="Frontend" />
-            <Team name="Data Science" />
-=======
->>>>>>> 12174b8b4bab3b3d19ad75e6c9b042513d9bbc03
+            {teams.map((team) => {
+                return (
+                    <Team
+                        name={team.name}
+                        key={team.name}
+                        primaryColor={team.primaryColor}
+                        secondaryColor={team.secondaryColor}
+                    ></Team>
+                );
+            })}
         </div>
     );
 }

@@ -2,6 +2,7 @@ import { useState } from "react";
 import Banner from "./components/Banner/Banner";
 import Form from "./components/Form";
 import Team from "./components/Team";
+import Footer from "./components/Footer";
 
 function App() {
     const [employes, setEmployes] = useState([]);
@@ -69,6 +70,7 @@ function App() {
                     ></Team>
                 );
             })}
+            <Footer></Footer>
         </div>
     );
 }
